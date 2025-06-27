@@ -6,15 +6,21 @@ public class DragableObject : MonoBehaviour
 {
     private bool _isDragging;
     private Vector2 _offset;
-    
+    private IInputReader _inputReader;
+
+    public void SetInputReader(IInputReader inputReader)
+    {
+        _inputReader = inputReader;
+    }
+
     public void MoveTo()
     {
-        transform.position = MouseInput.GetMousePosition() - _offset;
+        transform.position = _inputReader.GetPointerPosition() - _offset;
     }
 
     public void StartDrag()
     {   
-        _offset = MouseInput.GetMousePosition() - (Vector2)transform.position;
+        _offset = _inputReader.GetPointerPosition() - (Vector2)transform.position;
         _isDragging = true;
     }
 

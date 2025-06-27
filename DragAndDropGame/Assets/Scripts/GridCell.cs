@@ -9,13 +9,13 @@ public enum CellType
     Tail
 }
 
-public class GridCell : MonoBehaviour
+public class GridCell
 {
     private CellType _cellType;
     private Vector2Int _gridPosition;
     private GameObject _gameObject;
 
-    public void GridCell(CellType cellType, Vector2Int gridPosition, GameObject gameObject)
+    public GridCell(CellType cellType, Vector2Int gridPosition, GameObject gameObject)
     {
         _cellType = cellType;
         _gridPosition = gridPosition;
