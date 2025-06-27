@@ -1,0 +1,4 @@
+repository "DragAndDropGame 2025-06-27_15-32-00/DragAndDropGame@18967041628331@cloud"
+  path "/"
+    br "/main"
+    co "/main"
